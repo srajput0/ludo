@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Ludo Game</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/board.css">
+    <link rel="stylesheet" href="src/css/ui.css">
+    <link rel="stylesheet" href="src/css/themes/default.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <p>Loading Game...</p>
+        </div>
+
+        <div id="menu-screen" class="screen">
+            <h1>Ludo Game</h1>
+            <div class="menu-buttons">
+                <button id="play-local">Play Local</button>
+                <button id="play-online">Play Online</button>
+                <button id="play-ai">Play vs AI</button>
+                <button id="settings">Settings</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div id="board-container"></div>
+            
+            <div id="game-ui">
+                <div id="player-info"></div>
+                <div id="dice-container">
+                    <button id="roll-dice">Roll Dice</button>
+                    <div id="dice-value"></div>
+                </div>
+                <div id="game-controls">
+                    <button id="leave-game">Leave Game</button>
+                    <button id="settings-game">Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Settings</h2>
+                <div class="settings-section">
+                    <h3>Game</h3>
+                    <label>
+                        <input type="checkbox" id="sound-enabled" checked>
+                        Sound Effects
+                    </label>
+                    <label>
+                        <input type="checkbox" id="music-enabled" checked>
+                        Background Music
+                    </label>
+                </div>
+                <div class="settings-section">
+                    <h3>Graphics</h3>
+                    <label>
+                        Quality:
+                        <select id="graphics-quality">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="settings-section">
+                    <h3>Theme</h3>
+                    <label>
+                        <select id="theme-select">
+                            <option value="default">Default</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </label>
+                </div>
+                <button id="close-settings">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
